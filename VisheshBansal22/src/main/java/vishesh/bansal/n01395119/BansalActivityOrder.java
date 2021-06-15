@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class BansalActivityOrder extends AppCompatActivity {
 
@@ -13,5 +14,8 @@ public class BansalActivityOrder extends AppCompatActivity {
         setContentView(R.layout.activity_bansal);
 
         Intent intent = getIntent();
+        String storeName = intent.getStringExtra(VisheshActivity.EXTRA_MESSAGE);
+        TextView storeTitle = findViewById(R.id.VisheshStoreName);
+        storeTitle.setText(storeName);
     }
 }

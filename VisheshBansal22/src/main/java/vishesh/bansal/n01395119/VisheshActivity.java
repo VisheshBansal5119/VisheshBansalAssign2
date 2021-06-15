@@ -3,19 +3,35 @@ package vishesh.bansal.n01395119;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class VisheshActivity extends AppCompatActivity {
     boolean storeSelect = false;
+    public static final String EXTRA_MESSAGE = "vishesh.bansal.n01395119.MESSAGE";
+    String store = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu,menu);
+        return true;
     }
 
 
@@ -27,12 +43,15 @@ public class VisheshActivity extends AppCompatActivity {
         if(pizpiz.isChecked()){
             displayToast("Pizza Pizza");
             storeSelect = true;
+            store = "Pizza Pizza";
         }else if (domi.isChecked()){
             displayToast("Dominos");
             storeSelect = true;
+            store = "Dominos";
         }else{
             storeSelect = true;
             displayToast("Pizza Nova");
+            store = "Pizza Nova";
         }
     }
     public void displayToast(String msg){
@@ -42,8 +61,10 @@ public class VisheshActivity extends AppCompatActivity {
     public void onNext(View view){
         Intent intent = null;
         intent = new Intent(this, BansalActivityOrder.class);
+
         if(storeSelect) {
             displayToast("on next");
+            intent.putExtra(EXTRA_MESSAGE,store);
             startActivity(intent);
         }else{
             displayToast("Please select a store");
@@ -70,10 +91,24 @@ public class VisheshActivity extends AppCompatActivity {
 
     }
     @Override
-    public void onBackPressed(){
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = null;
+        String helpSite = "https://www.apple.ca";
+        switch (item.getItemId())
+        {
+            case R.id.VisheshHelp:
+                intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(helpSite));
+                Context context = getApplicationContext();
+                CharSequence text = getString(R.string.app_name) +" " + helpSite;
+                startActivity(intent);
+                break;
 
+        }   return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void onBackPressed(){
        onBack();
     }
-
 
 }

@@ -6,4 +6,170 @@
     android:layout_height="match_parent"
     tools:context=".BansalActivityOrder">
 
+    <TextView
+        android:id="@+id/VisheshStoreName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="250dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VisheshStoreName">
+
+        <RadioButton
+            android:id="@+id/VisheshBoston"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Boston Style  $9.99" />
+
+        <RadioButton
+            android:id="@+id/VisheshCheese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cheese  $5.99" />
+
+        <RadioButton
+            android:id="@+id/VisheshChicago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chicago Style  $12.99" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="252dp"
+        android:layout_height="171dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.038">
+
+        <TextView
+            android:id="@+id/VisheshSizeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Size" />
+
+        <RadioButton
+            android:id="@+id/VisheshSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Small $4.50" />
+
+        <RadioButton
+            android:id="@+id/VisheshMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium $6.5" />
+
+        <RadioButton
+            android:id="@+id/VisheshLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Large $8.5" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/VisheshTypeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Type"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/VisheshToppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extra Toppings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <CheckBox
+        android:id="@+id/VisheshMush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mushroom  +$.50"
+        app:layout_constraintEnd_toStartOf="@+id/VisheshRedPepper"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VisheshToppings" />
+
+    <CheckBox
+        android:id="@+id/VisheshOnions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Onions +$.50"
+        app:layout_constraintBottom_toTopOf="@+id/VisheshCheckout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        app:layout_constraintVertical_bias="0.908" />
+
+    <CheckBox
+        android:id="@+id/VisheshPineapple"
+        android:layout_width="141dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:text="Pineapple +$.50"
+        app:layout_constraintEnd_toStartOf="@+id/VisheshExtraCheese"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VisheshMush" />
+
+    <CheckBox
+        android:id="@+id/VisheshExtraCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Extra Cheese +$.50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VisheshRedPepper" />
+
+    <CheckBox
+        android:id="@+id/VisheshRedPepper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Red Pepper +$.50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.752"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <Button
+        android:id="@+id/VisheshCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VisheshExtraCheese"
+        app:layout_constraintVertical_bias="0.684" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
