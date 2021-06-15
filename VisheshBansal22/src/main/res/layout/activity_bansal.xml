@@ -10,7 +10,7 @@
         android:id="@+id/VisheshStoreName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.457"
@@ -32,19 +32,19 @@
             android:id="@+id/VisheshBoston"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Boston Style  $9.99" />
+            android:text="@string/boston_style_9_99" />
 
         <RadioButton
             android:id="@+id/VisheshCheese"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cheese  $5.99" />
+            android:text="@string/cheese_5_99" />
 
         <RadioButton
             android:id="@+id/VisheshChicago"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Chicago Style  $12.99" />
+            android:text="@string/chicago_style_12_99" />
     </RadioGroup>
 
     <RadioGroup
@@ -68,19 +68,19 @@
             android:id="@+id/VisheshSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Small $4.50" />
+            android:text="@string/small_4_50" />
 
         <RadioButton
             android:id="@+id/VisheshMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Medium $6.5" />
+            android:text="@string/medium_6_5" />
 
         <RadioButton
             android:id="@+id/VisheshLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Large $8.5" />
+            android:text="@string/large_8_5" />
     </RadioGroup>
 
     <TextView
@@ -99,7 +99,7 @@
         android:id="@+id/VisheshToppings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Extra Toppings"
+        android:text="@string/extra_toppings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
@@ -111,7 +111,7 @@
         android:id="@+id/VisheshMush"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mushroom  +$.50"
+        android:text="@string/mushroom_50"
         app:layout_constraintEnd_toStartOf="@+id/VisheshRedPepper"
         app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +121,7 @@
         android:id="@+id/VisheshOnions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Onions +$.50"
+        android:text="@string/onions_50"
         app:layout_constraintBottom_toTopOf="@+id/VisheshCheckout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +133,7 @@
         android:layout_width="141dp"
         android:layout_height="51dp"
         android:layout_marginTop="16dp"
-        android:text="Pineapple +$.50"
+        android:text="@string/pineapple_50"
         app:layout_constraintEnd_toStartOf="@+id/VisheshExtraCheese"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
@@ -144,7 +144,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Extra Cheese +$.50"
+        android:text="@string/extra_cheese_50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.782"
         app:layout_constraintStart_toStartOf="parent"
@@ -155,7 +155,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Red Pepper +$.50"
+        android:text="@string/red_pepper_50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.752"
         app:layout_constraintStart_toStartOf="parent"

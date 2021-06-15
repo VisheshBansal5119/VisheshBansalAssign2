@@ -7,10 +7,10 @@
     tools:context=".BansalActivityPayment">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/SummaryLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Summary"
+        android:text="@string/summary_label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,10 +18,10 @@
         app:layout_constraintVertical_bias="0.058" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Total_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/total_label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,10 +29,10 @@
         app:layout_constraintVertical_bias="0.32" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/PaymentInfoLabel"
         android:layout_width="152dp"
         android:layout_height="31dp"
-        android:text="TextView"
+        android:text="@string/payment_info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -41,10 +41,10 @@
         app:layout_constraintVertical_bias="0.431" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/PlaceOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/place_order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
@@ -56,91 +56,92 @@
         android:id="@+id/VisheshProvinces"
         android:layout_width="239dp"
         android:layout_height="26dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="84dp"
         android:entries="@array/provinces"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/VisheshCCNumber" />
 
     <Switch
-        android:id="@+id/VisheshDelivery"
+        android:id="@+id/VisheshDeliveryOption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Delivery"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:text="@string/delivery_switch"
+        app:layout_constraintBottom_toTopOf="@+id/PlaceOrder"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
-        app:layout_constraintVertical_bias="0.742" />
+        app:layout_constraintTop_toBottomOf="@+id/VisheshCCNumber"
+        app:layout_constraintVertical_bias="0.845" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/VisheshOrderSummary"
         android:layout_width="319dp"
         android:layout_height="108dp"
         android:layout_marginTop="32dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/Total_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.358"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/SummaryLabel"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/VisheshCCName"
+        android:layout_width="386dp"
+        android:layout_height="50dp"
         android:ems="10"
+        android:hint="@string/hint_name_on_credit_card"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ  "
         android:inputType="textPersonName"
-        android:hint="Max Length 8"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+        app:layout_constraintBottom_toTopOf="@+id/VisheshCCNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/PaymentInfoLabel"
         app:layout_constraintVertical_bias="0.634" />
 
     <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/VisheshCCNumber"
+        android:layout_width="388dp"
+        android:layout_height="55dp"
         android:layout_marginTop="408dp"
         android:ems="10"
+        android:hint="@string/hint_credit_card_number_max_length_8"
         android:inputType="phone"
-        android:hint="Max Length 8"
+        android:maxLength="8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/VisheshAddress"
+        android:layout_width="381dp"
+        android:layout_height="61dp"
         android:layout_marginTop="12dp"
         android:ems="10"
+        android:hint="@string/hint_address"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/VisheshProvinces"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        app:layout_constraintTop_toBottomOf="@+id/VisheshCCNumber"
         app:layout_constraintVertical_bias="0.047" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName5"
-        android:layout_width="101dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="17dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+    <TextView
+        android:id="@+id/VisheshTotalAmount"
+        android:layout_width="91dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="21dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/Total_label"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

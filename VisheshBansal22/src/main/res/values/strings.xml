@@ -1,5 +1,26 @@
+<!-- Vishesh Bansal N01395119 Section: RNA-->
 <resources>
-    <string name="app_name">VisheshBansal2</string>
+    <string name="app_name">Vishesh_Bansal_n01395119</string>
+    <string name="red_pepper_50">Red Pepper +$.50</string>
+    <string name="extra_cheese_50">Extra Cheese +$.50</string>
+    <string name="pineapple_50">Pineapple +$.50</string>
+    <string name="onions_50">Onions +$.50</string>
+    <string name="mushroom_50">Mushroom +$.50</string>
+    <string name="extra_toppings">Extra Toppings</string>
+    <string name="large_8_5">Large $8.5</string>
+    <string name="medium_6_5">Medium $6.5</string>
+    <string name="small_4_50">Small $4.50</string>
+    <string name="chicago_style_12_99">Chicago Style $12.99</string>
+    <string name="cheese_5_99">Cheese $5.99</string>
+    <string name="boston_style_9_99">Boston Style $9.99</string>
+    <string name="hint_name_on_credit_card">Name on Credit Card</string>
+    <string name="hint_credit_card_number_max_length_8">Credit Card Number (Max Length 8)</string>
+    <string name="hint_address">Address</string>
+    <string name="place_order">Place Order</string>
+    <string name="payment_info">Payment Info</string>
+    <string name="total_label">Total</string>
+    <string name="summary_label">Summary</string>
+    <string name="delivery_switch">Delivery</string>
 
     <string-array name="provinces">
         <item>Ontario</item>

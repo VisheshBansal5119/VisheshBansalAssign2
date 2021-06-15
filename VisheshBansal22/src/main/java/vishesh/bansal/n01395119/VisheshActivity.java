@@ -1,3 +1,4 @@
+// Vishesh Bansal N01395119 Section: RNA
 package vishesh.bansal.n01395119;
 
 import androidx.appcompat.app.AlertDialog;
@@ -41,16 +42,13 @@ public class VisheshActivity extends AppCompatActivity {
         RadioButton nova = (RadioButton)findViewById(R.id.VisheshNova);
 
         if(pizpiz.isChecked()){
-            displayToast("Pizza Pizza");
             storeSelect = true;
             store = "Pizza Pizza";
         }else if (domi.isChecked()){
-            displayToast("Dominos");
             storeSelect = true;
             store = "Dominos";
         }else{
             storeSelect = true;
-            displayToast("Pizza Nova");
             store = "Pizza Nova";
         }
     }
