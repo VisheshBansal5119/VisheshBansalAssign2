@@ -21,6 +21,8 @@
     <string name="total_label">Total</string>
     <string name="summary_label">Summary</string>
     <string name="delivery_switch">Delivery</string>
+    <string name="continue_button">Continue</string>
+    <string name="checkout_button">Checkout</string>
 
     <string-array name="provinces">
         <item>Ontario</item>

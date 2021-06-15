@@ -46,11 +46,11 @@ public class BansalActivityOrder extends AppCompatActivity {
             orderDetail[0]="Boston $9.99";
             return 9.99;
         }else if (Cheese.isChecked()){
-            orderDetail[0]="Cheese 5.99";
+            orderDetail[0]="Cheese $5.99";
             selectType = true;
             return 5.99;
         }else if(Chicago.isChecked()){
-            orderDetail[0]="Chicago 12.99";
+            orderDetail[0]="Chicago $12.99";
             selectType = true;
             return 12.99;
         }
