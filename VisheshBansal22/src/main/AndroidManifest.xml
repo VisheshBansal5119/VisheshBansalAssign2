@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VisheshBansal2">
-        <activity android:name=".BansalActivityOrder"></activity>
+        <activity android:name=".BansalActivityPayment"></activity>
+        <activity android:name=".BansalActivityOrder" />
         <activity android:name=".VisheshActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

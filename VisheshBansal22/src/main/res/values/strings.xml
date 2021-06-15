@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">VisheshBansal2</string>
+
+    <string-array name="provinces">
+        <item>Ontario</item>
+        <item>British Columbia</item>
+        <item>Alberta</item>
+        <item>Quebec</item>
+        <item>Manitoba</item>
+
+    </string-array>
 </resources>
