@@ -21,6 +21,7 @@ import android.widget.Toast;
 public class BansalActivityOrder extends AppCompatActivity {
     boolean selectType = false;
     boolean selectSize = false;
+    boolean selectTop = false;
     public static final String TOTAL = "vishesh.bansal.n01395119.TOTAL";
     public static final String SUMMARY = "vishesh.bansal.n01395119.SUMMARY";
     String[] orderDetail = new String[25];
@@ -104,6 +105,9 @@ public class BansalActivityOrder extends AppCompatActivity {
             toppings += " Onions +$0.50";
             count++;
         }
+        if(count>0){
+            selectTop = true;
+        }
         orderDetail[2] = toppings;
         return (count*.5);
     }
@@ -114,15 +118,15 @@ public class BansalActivityOrder extends AppCompatActivity {
         total+= onExtraTop();
         total = Math.round(total);
 
-        if(selectType&&selectSize) {
+        if(selectType&&selectSize&&selectTop) {
             Intent intent = null;
             intent = new Intent(this, BansalActivityPayment.class);
-
             intent.putExtra(TOTAL,total);
             intent.putExtra(SUMMARY,orderDetail);
             startActivity(intent);
+
         }else{
-            Toast.makeText(getBaseContext(),"Please select a store",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(),"Incomplete Selection",Toast.LENGTH_SHORT).show();
         }
     }
     private void setupActionBar() {

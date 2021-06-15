@@ -7,10 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class BansalActivityPayment extends AppCompatActivity {
-
+    public static final String TOTAL = "vishesh.bansal.n01395119.TOTAL";
+    public static final String SUMMARY = "vishesh.bansal.n01395119.SUMMARY";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,4 +44,11 @@ public class BansalActivityPayment extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+    public void onPlaceOrder(View view){
+        Button placeOrder = findViewById(R.id.PlaceOrder);
+        Intent intent = new Intent(this,BansalActivityCheckout.class);
+        startActivity(intent);
+    }
+
+
 }

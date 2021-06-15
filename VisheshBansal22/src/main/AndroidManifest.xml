@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/applogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.VisheshBansal2">
-        <activity android:name=".BansalActivityPayment"></activity>
+        <activity android:name=".BansalActivityCheckout"></activity>
+        <activity android:name=".BansalActivityPayment" />
         <activity android:name=".BansalActivityOrder" />
         <activity android:name=".VisheshActivity">
             <intent-filter>
