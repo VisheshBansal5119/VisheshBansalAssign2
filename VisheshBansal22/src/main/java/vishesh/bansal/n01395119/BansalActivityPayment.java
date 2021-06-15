@@ -13,8 +13,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class BansalActivityPayment extends AppCompatActivity {
-    public static final String TOTAL = "vishesh.bansal.n01395119.TOTAL";
-    public static final String SUMMARY = "vishesh.bansal.n01395119.SUMMARY";
+    public static final String TOTAL = "vishesh.bansal.n01395119.Order.TOTAL";
+    public static final String SUMMARY = "vishesh.bansal.n01395119.Order.SUMMARY";
+    double grossTotal =0;
+    String[] orderDetails = new String[25];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,11 +24,12 @@ public class BansalActivityPayment extends AppCompatActivity {
         Intent intent = getIntent();
         double total = intent.getDoubleExtra(BansalActivityOrder.TOTAL,0);
         double tax = Math.round((total*.13));
-        String[] orderDetails = intent.getStringArrayExtra(BansalActivityOrder.SUMMARY);
+         orderDetails = intent.getStringArrayExtra(BansalActivityOrder.SUMMARY);
         TextView orderSummary = findViewById(R.id.VisheshOrderSummary);
         orderSummary.setText("Style:  "+ orderDetails[0] +"\nSize:  "+ orderDetails[1]+ "\nToppings:"+ orderDetails[2] +"\nTax:"+ tax);
         TextView totalLabel = findViewById(R.id.Total_label);
         total += tax;
+        grossTotal = total;
         totalLabel.setText("$"+String.valueOf(total));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -47,6 +50,8 @@ public class BansalActivityPayment extends AppCompatActivity {
     public void onPlaceOrder(View view){
         Button placeOrder = findViewById(R.id.PlaceOrder);
         Intent intent = new Intent(this,BansalActivityCheckout.class);
+        intent.putExtra(TOTAL,grossTotal);
+        intent.putExtra(SUMMARY,orderDetails);
         startActivity(intent);
     }
 
