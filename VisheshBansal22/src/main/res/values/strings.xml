@@ -17,7 +17,7 @@
     <string name="hint_credit_card_number_max_length_8">Credit Card Number (Max Length 8)</string>
     <string name="hint_address">Address</string>
     <string name="place_order">Place Order</string>
-    <string name="payment_info">Payment Info</string>
+    <string name="payment_info">Payment Details</string>
     <string name="total_label">Total</string>
     <string name="summary_label">Summary</string>
     <string name="delivery_switch">Delivery</string>
