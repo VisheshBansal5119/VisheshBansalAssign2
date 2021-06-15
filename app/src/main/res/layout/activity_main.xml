@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VisheshActivity">
+
+    <RadioGroup
+        android:id="@+id/VisheshStoreGroup"
+        android:layout_width="380dp"
+        android:layout_height="446dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <RadioButton
+            android:id="@+id/VisheshPizPiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="storeClick"
+            android:text="Pizza Pizza" />
+
+        <RadioButton
+            android:id="@+id/VisheshDomi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="storeClick"
+            android:text="Dominos" />
+
+        <RadioButton
+            android:id="@+id/VisheshNova"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="storeClick"
+            android:text="Pizza Nova" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/VisheshNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VisheshStoreGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>
