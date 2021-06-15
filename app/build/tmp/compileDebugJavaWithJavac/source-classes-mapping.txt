@@ -1,6 +1,0 @@
-vishesh/bansal/n01395119/BuildConfig.java
- vishesh.bansal.n01395119.BuildConfig
-vishesh/bansal/n01395119/VisheshActivity.java
- vishesh.bansal.n01395119.VisheshActivity
-vishesh/bansal/n01395119/BansalActivity.java
- vishesh.bansal.n01395119.BansalActivity
