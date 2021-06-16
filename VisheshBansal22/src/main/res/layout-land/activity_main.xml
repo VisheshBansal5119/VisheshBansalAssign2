@@ -22,21 +22,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="storeClick"
-            android:text="Pizza Pizza" />
+            android:text="@string/radio_label_piz" />
 
         <RadioButton
             android:id="@+id/VisheshDomi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="storeClick"
-            android:text="Dominos" />
+            android:text="@string/radio_label_domi" />
 
         <RadioButton
             android:id="@+id/VisheshNova"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="storeClick"
-            android:text="Pizza Nova" />
+            android:text="@string/radio_label_nova" />
     </RadioGroup>
 
     <Button

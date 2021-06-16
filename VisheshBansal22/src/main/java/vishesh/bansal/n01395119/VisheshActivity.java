@@ -61,7 +61,6 @@ public class VisheshActivity extends AppCompatActivity {
         intent = new Intent(this, BansalActivityOrder.class);
 
         if(storeSelect) {
-            displayToast("on next");
             intent.putExtra(EXTRA_MESSAGE,store);
             startActivity(intent);
         }else{

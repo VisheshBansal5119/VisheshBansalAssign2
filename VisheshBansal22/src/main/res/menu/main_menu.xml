@@ -6,16 +6,16 @@
         android:id="@+id/VisheshStoreLogo"
         android:icon="@drawable/applogo"
         android:orderInCategory="1"
-        android:title="storeLogo"
+        android:title="@string/menu_store_logo"
         app:showAsAction="always" />
     <item
         android:id="@+id/VisheshStoreLogo2"
         android:orderInCategory="2"
-        android:title="Vishesh"
+        android:title="@string/menu_usr_name"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/VisheshHelp"
-        android:title="Help" />
+        android:title="@string/menu_help_title" />
 
 </menu>

@@ -8,9 +8,10 @@
 
     <TextView
         android:id="@+id/SummaryLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="163dp"
+        android:layout_height="52dp"
         android:text="@string/summary_label"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,9 +20,10 @@
 
     <TextView
         android:id="@+id/Total_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="61dp"
+        android:layout_height="23dp"
         android:text="@string/total_label"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,6 +35,7 @@
         android:layout_width="152dp"
         android:layout_height="31dp"
         android:text="@string/payment_info"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -82,8 +85,8 @@
 
     <TextView
         android:id="@+id/VisheshOrderSummary"
-        android:layout_width="319dp"
-        android:layout_height="108dp"
+        android:layout_width="308dp"
+        android:layout_height="83dp"
         android:layout_marginTop="32dp"
         app:layout_constraintBottom_toTopOf="@+id/Total_label"
         app:layout_constraintEnd_toEndOf="parent"
