@@ -25,7 +25,7 @@ public class VisheshActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Intent intent =getIntent();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

@@ -16,8 +16,8 @@ import android.widget.TextView;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class BansalActivityPayment extends AppCompatActivity {
-    public static final String OTOTAL = "vishesh.bansal.n01395119.Order.TOTAL";
-    public static final String OSUMMARY = "vishesh.bansal.n01395119.Order.SUMMARY";
+    public static final String TOTAL = "vishesh.bansal.n01395119.Order.TOTAL";
+    public static final String SUMMARY = "vishesh.bansal.n01395119.Order.SUMMARY";
     public static final String PAYMENT = "vishesh.bansal.n01395119.Order.PAYMENT";
     public static final String DELIVERY = "vishesh.bansal.n01395119.Order.Deli";
     TextView totalLabel;
@@ -112,11 +112,12 @@ public class BansalActivityPayment extends AppCompatActivity {
     }
     public void onPlaceOrder(View view){
         if(validateName()) {
+
         getPayInfo();
-           // Button placeOrder = findViewById(R.id.PlaceOrder);
+
             Intent intent = new Intent(this, BansalActivityCheckout.class);
-            intent.putExtra(OTOTAL, grossTotal);
-            intent.putExtra(OSUMMARY, orderDetails);
+            intent.putExtra(TOTAL, grossTotal);
+            intent.putExtra(SUMMARY, orderDetails);
             intent.putExtra(DELIVERY,delivery);
             intent.putExtra(PAYMENT,payInfo);
             startActivity(intent);
