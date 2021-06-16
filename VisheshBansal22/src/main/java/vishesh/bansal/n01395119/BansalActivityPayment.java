@@ -56,11 +56,8 @@ public class BansalActivityPayment extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                // todo: goto back activity from here
-
                 finish();
                 return true;
-
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -86,17 +83,17 @@ public class BansalActivityPayment extends AppCompatActivity {
         CCaddress = address.getText().toString();
                 boolean validate = true;
                if(CCname.length()<3){
-                name.setError("Min 3 characters");
+                name.setError(getString(R.string.CCname_3_error));
                 validate = false;
                 }else if (CCnum.length()<8){
                     validate = false;
-                    card.setError("Incomplete Invalid Number, must be 8 digits");
+                    card.setError(getString(R.string.CCnum_error));
                 }else if (CCnum.isEmpty()){
                     validate = false;
-                    card.setError("Field can't be empty");
+                    card.setError(getString(R.string.empty_field_error));
                 }else if(CCaddress.isEmpty()){
                     validate = false;
-                    address.setError("Field can't be empty");
+                    address.setError(getString(R.string.address_empty_error));
                 }
         return validate;
     }

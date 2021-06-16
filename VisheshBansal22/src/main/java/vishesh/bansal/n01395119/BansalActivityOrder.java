@@ -43,14 +43,14 @@ public class BansalActivityOrder extends AppCompatActivity {
         RadioButton Chicago = (RadioButton)findViewById(R.id.VisheshChicago);
         if(Boston.isChecked()){
             selectType = true;
-            orderDetail[0]="Boston $9.99";
+            orderDetail[0]=getString(R.string.boston_label);
             return 9.99;
         }else if (Cheese.isChecked()){
-            orderDetail[0]="Cheese $5.99";
+            orderDetail[0]=getString(R.string.chesse_label);
             selectType = true;
             return 5.99;
         }else if(Chicago.isChecked()){
-            orderDetail[0]="Chicago $12.99";
+            orderDetail[0]=getString(R.string.chicago_label);
             selectType = true;
             return 12.99;
         }
@@ -63,15 +63,15 @@ public class BansalActivityOrder extends AppCompatActivity {
 
         if(Small.isChecked()){
             selectSize = true;
-            orderDetail[1]="Small $4.5";
+            orderDetail[1]=getString(R.string.pizza_size_small);
             return 4.5;
         }else if (Medium.isChecked()){
             selectSize = true;
-            orderDetail[1]="Medium $6.5";
+            orderDetail[1]=getString(R.string.pizza_size_med);
             return 6.5;
         }else if(Large.isChecked()){
             selectSize = true;
-            orderDetail[1]="Large $8.5";
+            orderDetail[1]=getString(R.string.pizza_size_lg);
             return 8.5;
         }
         return 0;
@@ -86,23 +86,23 @@ public class BansalActivityOrder extends AppCompatActivity {
         int count =0;
         String toppings = new String();
         if(mush.isChecked()){
-            toppings = " Mushroom +$0.50";
+            toppings = getString(R.string.top_mush);
             count ++;
         }
         if(rpep.isChecked()) {
-            toppings += " Red Pepper +$0.50";
+            toppings += getString(R.string.top_R_pep);
             count++;
         }
         if(pine.isChecked()) {
-            toppings += " Pineapple +$0.50";
+            toppings += getString(R.string.top_pine);
             count++;
         }
         if(extcheese.isChecked()) {
-            toppings += " Extra Cheese +$0.50";
+            toppings += getString(R.string.top_ext_cheese);
             count++;
         }
         if(oni.isChecked()) {
-            toppings += " Onions +$0.50";
+            toppings += getString(R.string.top_oni);
             count++;
         }
         if(count>0){
@@ -140,11 +140,8 @@ public class BansalActivityOrder extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                // todo: goto back activity from here
-
                 finish();
                 return true;
-
             default:
                 return super.onOptionsItemSelected(item);
         }

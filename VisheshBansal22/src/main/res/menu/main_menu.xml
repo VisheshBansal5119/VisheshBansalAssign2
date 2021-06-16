@@ -2,7 +2,17 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-
+    <item
+        android:id="@+id/VisheshStoreLogo"
+        android:icon="@drawable/applogo"
+        android:orderInCategory="1"
+        android:title="storeLogo"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/VisheshStoreLogo2"
+        android:orderInCategory="2"
+        android:title="Vishesh"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/VisheshHelp"

@@ -21,6 +21,7 @@ public class VisheshActivity extends AppCompatActivity {
     boolean storeSelect = false;
     public static final String EXTRA_MESSAGE = "vishesh.bansal.n01395119.MESSAGE";
     String store = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,17 +40,16 @@ public class VisheshActivity extends AppCompatActivity {
     public void storeClick(View view){
         RadioButton pizpiz = (RadioButton)findViewById(R.id.VisheshPizPiz);
         RadioButton domi = (RadioButton)findViewById(R.id.VisheshDomi);
-        RadioButton nova = (RadioButton)findViewById(R.id.VisheshNova);
 
         if(pizpiz.isChecked()){
             storeSelect = true;
-            store = "Pizza Pizza";
+            store = getString(R.string.store_name_piz);
         }else if (domi.isChecked()){
             storeSelect = true;
-            store = "Dominos";
+            store = getString(R.string.store_name_domi);
         }else{
             storeSelect = true;
-            store = "Pizza Nova";
+            store = getString(R.string.store_name_nova);
         }
     }
     public void displayToast(String msg){
@@ -65,7 +65,7 @@ public class VisheshActivity extends AppCompatActivity {
             intent.putExtra(EXTRA_MESSAGE,store);
             startActivity(intent);
         }else{
-            displayToast("Please select a store");
+            displayToast(getString(R.string.select_store_msg));
         }
     }
 
@@ -76,14 +76,11 @@ public class VisheshActivity extends AppCompatActivity {
                 .setCancelable(false)
                 .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                    displayToast("yes clicked");
                        finish();
                     }})
                 .setIcon(R.drawable.alert)
                 .setNegativeButton("No",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        displayToast("no clicked");
-
                     }});
         builder.show();
 
@@ -91,7 +88,7 @@ public class VisheshActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent = null;
-        String helpSite = "https://www.apple.ca";
+        String helpSite = getString(R.string.help_redirect);
         switch (item.getItemId())
         {
             case R.id.VisheshHelp:
@@ -101,6 +98,7 @@ public class VisheshActivity extends AppCompatActivity {
                 CharSequence text = getString(R.string.app_name) +" " + helpSite;
                 startActivity(intent);
                 break;
+
 
         }   return super.onOptionsItemSelected(item);
     }

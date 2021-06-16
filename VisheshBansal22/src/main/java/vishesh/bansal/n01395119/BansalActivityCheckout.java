@@ -1,3 +1,4 @@
+// Vishesh Bansal N01395119 Section: RNA
 package vishesh.bansal.n01395119;
 
 import androidx.appcompat.app.AlertDialog;
@@ -38,11 +39,8 @@ public class BansalActivityCheckout extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                // todo: goto back activity from here
-
                 finish();
                 return true;
-
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -52,9 +50,9 @@ public class BansalActivityCheckout extends AppCompatActivity {
         int rand = (int) Math.round((Math.random()*100));
         String msg= null;
         if(delivery) {
-            msg = "Order No: " + String.valueOf(rand) + " Delivery at 9:45PM";
+            msg = "Order No: " + String.valueOf(rand) + getString(R.string.del_msg);
         }else {
-            msg = "Order No: " + String.valueOf(rand) + " Pickup at 9:45PM";
+            msg = "Order No: " + String.valueOf(rand) + getString(R.string.pick_msg);
         }
         return msg;
     }
@@ -64,10 +62,10 @@ public class BansalActivityCheckout extends AppCompatActivity {
     }
     public void onCheckout(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(BansalActivityCheckout.this);
-        builder.setTitle("Order Confirmed");
+        builder.setTitle(R.string.confirmed_order_msg);
         builder.setMessage(alertMsg())
                 .setCancelable(false)
-                .setPositiveButton("Dismiss",new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.final_dialog_dismiss,new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                     callMainActivity();
                     }})

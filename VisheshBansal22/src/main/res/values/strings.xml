@@ -23,6 +23,30 @@
     <string name="delivery_switch">Delivery</string>
     <string name="continue_button">Continue</string>
     <string name="checkout_button">Checkout</string>
+    <string name="help_redirect">https://andpizza.com/contact-us/</string>
+    <string name="store_name_piz">Pizza Pizza</string>
+    <string name="store_name_domi">Dominos</string>
+    <string name="store_name_nova">Pizza Nova</string>
+    <string name="select_store_msg">Please select a store</string>
+    <string name="boston_label">Boston $9.99</string>
+    <string name="chesse_label">Cheese $5.99</string>
+    <string name="chicago_label">Chicago $12.99</string>
+    <string name="pizza_size_small">Small $4.5</string>
+    <string name="pizza_size_med">Medium $6.5</string>
+    <string name="pizza_size_lg">Large $8.5</string>
+    <string name="top_mush">\" Mushroom +$0.50\"</string>
+    <string name="top_R_pep">\" Red Pepper +$0.50\"</string>
+    <string name="top_pine">\" Pineapple +$0.50\"</string>
+    <string name="top_ext_cheese">\" Extra Cheese +$0.50\"</string>
+    <string name="top_oni">\" Onions +$0.50\"</string>
+    <string name="CCname_3_error">Min 3 characters</string>
+    <string name="CCnum_error">Incomplete Invalid Number, must be 8 digits</string>
+    <string name="empty_field_error">Field can\'t be empty</string>
+    <string name="address_empty_error">Field can\'t be empty</string>
+    <string name="confirmed_order_msg">Order Confirmed</string>
+    <string name="final_dialog_dismiss">Dismiss</string>
+    <string name="del_msg">\" Delivery at 9:45PM\"</string>
+    <string name="pick_msg">\" Pickup at 9:45PM\"</string>
 
     <string-array name="provinces">
         <item>Ontario</item>
