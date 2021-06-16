@@ -116,7 +116,7 @@ public class BansalActivityOrder extends AppCompatActivity {
         total = onSelectSize();
         total+= onSelectType();
         total+= onExtraTop();
-        total = Math.round(total);
+
 
         if(selectType&&selectSize&&selectTop) {
             Intent intent = null;

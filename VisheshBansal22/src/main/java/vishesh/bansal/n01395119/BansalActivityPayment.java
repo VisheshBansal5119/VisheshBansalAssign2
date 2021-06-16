@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.text.DecimalFormat;
+
 public class BansalActivityPayment extends AppCompatActivity {
     public static final String TOTAL = "vishesh.bansal.n01395119.Order.TOTAL";
     public static final String SUMMARY = "vishesh.bansal.n01395119.Order.SUMMARY";
@@ -48,7 +50,8 @@ public class BansalActivityPayment extends AppCompatActivity {
         totalLabel = findViewById(R.id.Total_label);
         total += tax;
         grossTotal = total;
-        totalLabel.setText("$"+String.valueOf(total));
+        DecimalFormat df = new DecimalFormat("####0.00");
+        totalLabel.setText("$"+df.format(total));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
