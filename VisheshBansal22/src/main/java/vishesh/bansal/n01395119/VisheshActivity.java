@@ -17,8 +17,10 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+
 public class VisheshActivity extends AppCompatActivity {
     boolean storeSelect = false;
+    MenuItem icon;
     public static final String EXTRA_MESSAGE = "vishesh.bansal.n01395119.MESSAGE";
     String store = null;
 
@@ -26,13 +28,14 @@ public class VisheshActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent =getIntent();
+        Intent intent = getIntent();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu,menu);
+        icon  = findViewById(R.id.VisheshStoreLogo);
         return true;
     }
 
@@ -41,9 +44,11 @@ public class VisheshActivity extends AppCompatActivity {
         RadioButton pizpiz = (RadioButton)findViewById(R.id.VisheshPizPiz);
         RadioButton domi = (RadioButton)findViewById(R.id.VisheshDomi);
 
+
         if(pizpiz.isChecked()){
             storeSelect = true;
             store = getString(R.string.store_name_piz);
+           // icon.setIcon(R.drawable.pizpiz);
         }else if (domi.isChecked()){
             storeSelect = true;
             store = getString(R.string.store_name_domi);
