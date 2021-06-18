@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -28,6 +29,7 @@ public class VisheshActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        icon  = findViewById(R.id.VisheshStoreLogo);
         Intent intent = getIntent();
     }
     @Override
@@ -35,7 +37,7 @@ public class VisheshActivity extends AppCompatActivity {
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu,menu);
-        icon  = findViewById(R.id.VisheshStoreLogo);
+        icon = menu.getItem(1);
         return true;
     }
 
@@ -48,13 +50,16 @@ public class VisheshActivity extends AppCompatActivity {
         if(pizpiz.isChecked()){
             storeSelect = true;
             store = getString(R.string.store_name_piz);
-           // icon.setIcon(R.drawable.pizpiz);
+
+          icon.setIcon(R.drawable.pizpiz);
         }else if (domi.isChecked()){
             storeSelect = true;
             store = getString(R.string.store_name_domi);
+            icon.setIcon(R.drawable.dominos);
         }else{
             storeSelect = true;
             store = getString(R.string.store_name_nova);
+            icon.setIcon(R.drawable.pizzanova);
         }
     }
     public void displayToast(String msg){
