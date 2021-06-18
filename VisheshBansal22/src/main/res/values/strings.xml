@@ -58,6 +58,9 @@
     <string name="text_label_final_pay">Proceed To Pay</string>
     <string name="welcome_msg">Welcome</string>
     <string name="select_a_store_msg">Select A Store</string>
+    <string name="piznova_link">https://pizzanova.com</string>
+    <string name="domi_link">https://www.dominos.ca/en/</string>
+    <string name="pizpiz_link">https://www.pizzapizza.ca</string>
 
     <string-array name="provinces">
         <item>Ontario</item>

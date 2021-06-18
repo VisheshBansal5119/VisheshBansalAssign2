@@ -24,6 +24,7 @@ public class VisheshActivity extends AppCompatActivity {
     MenuItem icon;
     public static final String EXTRA_MESSAGE = "vishesh.bansal.n01395119.MESSAGE";
     String store = null;
+    int StoreId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,15 +50,18 @@ public class VisheshActivity extends AppCompatActivity {
 
         if(pizpiz.isChecked()){
             storeSelect = true;
+            StoreId =1;
             store = getString(R.string.store_name_piz);
 
           icon.setIcon(R.drawable.pizpiz);
         }else if (domi.isChecked()){
             storeSelect = true;
+            StoreId =2;
             store = getString(R.string.store_name_domi);
             icon.setIcon(R.drawable.dominos);
         }else{
             storeSelect = true;
+            StoreId =3;
             store = getString(R.string.store_name_nova);
             icon.setIcon(R.drawable.pizzanova);
         }
@@ -100,6 +104,22 @@ public class VisheshActivity extends AppCompatActivity {
         String helpSite = getString(R.string.help_redirect);
         switch (item.getItemId())
         {
+            case R.id.VisheshStoreLogo:
+                if(StoreId ==1){
+                    intent = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse(getString(R.string.pizpiz_link)));
+                    startActivity(intent);
+                }else if (StoreId ==2){
+                    intent = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse(getString(R.string.domi_link)));
+                    startActivity(intent);
+                }else {
+
+                    intent = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse(getString(R.string.piznova_link)));
+                    startActivity(intent);
+                }
+                break;
             case R.id.VisheshHelp:
                 intent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse(helpSite));

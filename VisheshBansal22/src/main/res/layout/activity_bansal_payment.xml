@@ -116,6 +116,7 @@
         android:layout_height="55dp"
         android:layout_marginTop="408dp"
         android:ems="10"
+        android:digits="0123456789"
         android:hint="@string/hint_credit_card_number_max_length_8"
         android:inputType="phone"
         android:maxLength="8"
